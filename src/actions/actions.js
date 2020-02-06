@@ -1,0 +1,7 @@
+//Actions: ADDING
+export const SET_ADD_FEATURES = "SET_ADD_FEATURES";
+export const SET_RESET_PRICE = "SET_RESET_PRICE";
+
+//Actions: REMOVING
+export const SET_REMOVE_FEATURE = "SET_REMOVE_FEATURE";
+
