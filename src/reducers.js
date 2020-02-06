@@ -5,7 +5,7 @@ import { SET_ADD_FEATURES, SET_RESET_PRICE, SET_REMOVE_FEATURE } from "./actions
 export const initialState = {
   additionalPrice: 23000,
   car: {
-    price: 0,
+    price: 2300,
     name: "2019 Ford Mustang",
     image:
       "https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg",
@@ -23,6 +23,8 @@ export const initialState = {
 
 //root of all reducers
 export const rootReducer = (state = initialState, action) => {
+  console.log('action', action)
+
   switch (action.type) {
     case SET_ADD_FEATURES:
       return setAddFeatures(state, action);
@@ -37,7 +39,6 @@ export const rootReducer = (state = initialState, action) => {
 
 //all reducers that will go in root reducer
 export const setAddFeatures = (state, action) => {
-  console.log('action', action)
   return {
     //get everything in state
     ...state,
